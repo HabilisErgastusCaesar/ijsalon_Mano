@@ -1,0 +1,64 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: rgb(153, 82, 153);
+    border-top: 2px solid rgb(88, 9, 88);
+    border-bottom: 2px solid rgb(88, 9, 88);
+}
+
+.container .head_section {
+    display: flex;
+    flex-direction: column;
+}
+
+.container .info_section,
+.container .form_section {
+    display: flex;
+    flex-direction: column;
+}
+
+.container span {
+    display: flex;
+    flex-direction: row;
+}
+
+.container span label {
+    width: 40%;
+    text-align: center;
+    padding: 1rem;
+    color: white;
+}
+
+
+
+.container textarea:invalid {
+    border: 2px solid red;
+    transition: border 2s ease;
+}
+
+.container textarea:valid {
+    border: 2px solid lightgreen;
+    transition: border 2s ease;
+}
+
+.container button {
+    padding: 1rem;
+    background-color: rgb(153, 82, 153);
+    border: 2px solid rgb(88, 9, 88);
+}
+
+.container textarea {
+    resize: none;
+    height: 220px;
+    padding: 1rem;
+    background-color: white;
+    color: black;
+}
+
+@media screen and (min-width: 800px) {
+    .container .head_section {
+        display: flex;
+        flex-direction: row;
+    }
+}

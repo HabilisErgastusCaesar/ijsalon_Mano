@@ -1,0 +1,34 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 60px;
+    justify-self: center;
+    width: 100%;
+    background-color: rgba(153, 82, 153, .4);
+    border: 2px solid rgb(88, 9, 88);
+    z-index: 1;
+}
+
+.container section {
+    margin: 20px;
+    padding: 1rem;
+    background-color: rgb(153, 82, 153);
+    border: 2px solid rgb(88, 9, 88);
+}
+
+.container span {
+    display: flex;
+    width: 100%;
+    padding: 1rem;
+    color: white;
+}
+.container span a,
+.container span label {
+    width: 100%;
+}
+
+.container .label {
+    color: white;
+    padding: 1rem;
+}

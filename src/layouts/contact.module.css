@@ -1,0 +1,35 @@
+.container {
+    position: relative;
+    height: 95vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-color: rgb(88, 9, 88) rgba(153, 82, 153, .6);
+    scrollbar-width: thin;
+    z-index: 1;
+}
+
+.items_container {
+    position: absolute;
+    top: 80px;
+    width: 100%;
+}
+
+.container p,
+.container h1 {
+    color: white;
+    padding: 1rem;
+}
+
+.container .heading_img {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: fit-content;
+    z-index: 0;
+}
+
+.container .heading_img img {
+    height: 100vh;
+    z-index: 0;
+}

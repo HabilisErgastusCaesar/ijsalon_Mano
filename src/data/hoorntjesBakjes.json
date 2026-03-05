@@ -1,0 +1,59 @@
+[
+    {
+        "id": "bakjeS",
+        "title":"bakje S",
+        "description": "15 ml",
+        "img": "/ice_cream/ice_placeholder.jpg",
+        "korting": "none"
+    },
+    {
+        "id": "bakjeM",
+        "title":"bakje M",
+        "description": "30 ml",
+        "img": "/ice_cream/ice_placeholder.jpg",
+        "korting": "none"
+    },
+    {
+        "id": "bakjeL",
+        "title":"bakje L",
+        "description": "45 ml",
+        "img": "/ice_cream/ice_placeholder.jpg",
+        "korting": "none"
+    },
+    {
+        "id": "bakjeXL",
+        "title":"bakje XL",
+        "description": "60 ml",
+        "img": "/ice_cream/ice_placeholder.jpg",
+        "korting": "none"
+    },
+    {
+        "id": "hoorntjeS",
+        "title":"hoorntje S",
+        "description": "van dit hoorntjes raak je niet aan de schijt",
+        "img": "/ice_cream/ice_placeholder.jpg",
+        "korting": "none"
+    },
+    {
+        "id": "hoorntjeM",
+        "title":"hoorntje M",
+        "description": "van dit hoorntjes raak je niet aan de schijt",
+        "img": "/ice_cream/ice_placeholder.jpg",
+        "korting": "none"
+    },
+    {
+        "id": "hoorntjeL",
+        "title":"hoorntje L",
+        "description": "van dit hoorntjes raak je niet aan de schijt",
+        "img": "/ice_cream/ice_placeholder.jpg",
+        "korting": "none"
+    },
+    {
+        "id": "hoorntjeXL",
+        "title":"hoorntje XL",
+        "description": "van dit hoorntjes raak je niet aan de schijt",
+        "img": "/ice_cream/ice_placeholder.jpg",
+        "korting": "none"
+    }
+    
+]

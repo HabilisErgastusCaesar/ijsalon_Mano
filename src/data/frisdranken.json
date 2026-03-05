@@ -1,0 +1,30 @@
+[
+    {
+        "id": "cola",
+        "title":"cola",
+        "description": "1L",
+        "img": "/ice_cream/ice_placeholder.jpg",
+        "korting": "none"
+    },
+    {
+        "id": "cassis",
+        "title":"cassis",
+        "description": "1L",
+        "img": "/ice_cream/ice_placeholder.jpg",
+        "korting": "none"
+    },
+    {
+        "id": "7up",
+        "title":"7up",
+        "description": "1L",
+        "img": "/ice_cream/ice_placeholder.jpg",
+        "korting": "none"
+    },
+    {
+        "id": "Fanta",
+        "title":"Fanta",
+        "description": "1L",
+        "img": "/ice_cream/ice_placeholder.jpg",
+        "korting": "none"
+    }
+]
