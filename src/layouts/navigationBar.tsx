@@ -2,6 +2,7 @@ import styles from './navigationBar.module.css'
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { HOne } from '@/components/hOne';
 
 export const NavigationBar = () => {
     const [ popup, setPopup ] = useState<boolean>(false);
@@ -27,6 +28,6 @@ export const NavigationBar = () => {
                 </div>
             <button onClick={() => setPopup(false)} className={styles.openedPopup} />
         </div>}
-        <h1 className={styles.heading}>ijssalon Mano</h1>
+        <HOne text={"ijssalon Mano"} />
     </div>)
 }

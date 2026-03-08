@@ -1,0 +1,78 @@
+.container {
+    position: relative;
+    justify-self: left;
+    width: 80%;
+    margin-top: 20px;
+}
+
+.roundedButton_True,
+.roundedButton_False {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.background_False,
+.background_True {
+    position: absolute;
+    content: "";
+    top: 20px;
+    left: 0;
+    right: 0;
+    background-color: rgba(102, 98, 92, .6);
+    z-index: 0;
+}
+
+.background_False {
+    height: 10px;
+    transition: height 1s;
+}
+
+.background_True {
+    height: 200px;
+    transition: height 1s;
+    box-shadow: inset 0 -3em 3em rgb(0 200 0 / 30%),
+}
+
+.roundedButton_False {
+    background-color: rgb(153, 82, 153);
+    border: 2px solid rgb(88, 9, 88);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transition-property: border-bottom-right-radius, border-bottom-left-radius;
+    transition-duration: 1s, 1s;
+    transition-delay: 1s, 1s;
+    transition-timing-function: ease, ease;
+}
+
+.roundedButton_False:hover {
+    background-color: rgb(129, 45, 129);
+    border: 2px solid rgb(88, 9, 88);
+}
+
+.roundedButton_True {
+    background-color: rgb(129, 45, 129);
+    border: 2px solid rgb(29, 7, 29);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    transition: border-bottom-right-radius 2s, border-bottom-left-radius 2s;
+}
+
+.roundedButton_True label,
+.roundedButton_False label {
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    background-color: rgba(12, 5, 5, 0.4);
+    backdrop-filter: blur(10px);
+    padding: 6px;
+    width: 80%;
+    border-radius: 20px;
+    cursor: pointer;
+}

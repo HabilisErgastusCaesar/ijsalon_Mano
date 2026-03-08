@@ -39,34 +39,6 @@ export const IjssalonContextProvider: React.FC<ProviderProps> = ({
     ]);
 
     const [ strooisels, setStrooisels ] = useState<Item[] | any[]>([
-        {
-            id: "Strawberry",
-            title:"Strawberry",
-            description: "van dit strooisel raak je niet aan de schijt",
-            img: "/ice_cream/ice_placeholder.jpg",
-            korting: "none",
-        },
-        {
-            id: "Chocolate",
-            title:"Chocolate",
-            description: "van dit strooisel raak je niet aan de schijt",
-            img: "/ice_cream/ice_placeholder.jpg",
-            korting: "none",
-        },
-        {
-            id: "Banana",
-            title:"Banana",
-            description: "van dit strooisel raak je niet aan de schijt",
-            img: "/ice_cream/ice_placeholder.jpg",
-            korting: "none",
-        },
-        {
-            id: "Vanilla",
-            title:"Vanilla",
-            description: "van dit strooisel raak je niet aan de schijt",
-            img: "/ice_cream/ice_placeholder.jpg",
-            korting: "none",
-        },
     ]);
 
     const selection = useMemo(

@@ -1,8 +1,6 @@
-import { Bakjes } from "../homeLayouts/bakjes"
-import { Frisdranken } from "../homeLayouts/frisdranken"
-import { HoorntjesBakjes } from "../homeLayouts/hoorntjesBakjes"
-import { IjsSoorten } from "../homeLayouts/ijsSoorten"
-import { Strooisels } from "../homeLayouts/strooiSels"
+import { ItemListLayout } from "../homeLayouts/itemListLayout"
+import { RoundedButton } from "@/components/roundedButton"
+import { EditAddButtonLayout } from "./editAddButtonLayout"
 import { Add } from "./add"
 import styles from '../home.module.css'
 
@@ -46,69 +44,21 @@ export const LoggedScreen = ({checkLogin}:{checkLogin:any}) => {
 
     return (<div className={styles.container}>
         <h1>{checkLogin.userName}</h1>
-        <button onClick={() => changePopup("ijssoorten")}>ijssoorten</button>
-        {popup.ijssoorten && <IjsSoorten />}
+        <RoundedButton text={"ijssoorten"} buttonState={popup.ijssoorten} func={changePopup} arg={"ijssoorten"} />
+        <ItemListLayout state={popup.ijssoorten} arg={"ice"} nav={"ijsSoorten"} />
         {addPopup.ijssoorten && <Add selection={"ice"} />}
-        <span style={{
-            display: "flex",
-            width: "100%",
-            justifyContent: "center",
-            backgroundColor: "white",
-        }}>
-            <button style={{
-                width: "40%",
-            }}>edit</button>
-            <button style={{
-                width: "40%",
-            }} onClick={() => changeAddPopup("ijssoorten")}>add</button>
-        </span>
-        <button onClick={() => changePopup("strooisels")}>strooisels</button>
-        {popup.strooisels && <Strooisels />}
+        <EditAddButtonLayout />
+        <RoundedButton text={"strooisels"} buttonState={popup.strooisels} func={changePopup} arg={"strooisels"} />
+        <ItemListLayout state={popup.strooisels} arg={"strooisels"} nav={"strooiSels"} />
         {addPopup.strooisels && <Add selection={"strooisels"} />}
-        <span style={{
-            display: "flex",
-            width: "100%",
-            justifyContent: "center",
-            backgroundColor: "white",
-        }}>
-            <button style={{
-                width: "40%",
-            }}>edit</button>
-            <button style={{
-                width: "40%",
-            }} onClick={() => changeAddPopup("strooisels")}>add</button>
-        </span>
-        <button onClick={() => changePopup("hoorntjesBakjes")}>hoorntjes bakjes</button>
-        {popup.hoorntjesBakjes && <HoorntjesBakjes />}
+        <EditAddButtonLayout />
+        <RoundedButton text={"hoorntjes / bakjes"} buttonState={popup.hoorntjesBakjes} func={changePopup} arg={"hoorntjesBakjes"} />
+        <ItemListLayout state={popup.hoorntjesBakjes} arg={"hoorntjes"} nav={"hoorntjesBakjes"} />
         {addPopup.hoorntjesBakjes && <Add selection={"hoorntjes"} />}
-        <span style={{
-            display: "flex",
-            width: "100%",
-            justifyContent: "center",
-            backgroundColor: "white",
-        }}>
-            <button style={{
-                width: "40%",
-            }}>edit</button>
-            <button style={{
-                width: "40%",
-            }} onClick={() => changeAddPopup("hoorntjes")}>add</button>
-        </span>
-        <button onClick={() => changePopup("frisdranken")}>frisdranken</button>
-        {popup.frisdranken && <Frisdranken />}
+        <EditAddButtonLayout />
+        <RoundedButton text={"frisdranken"} buttonState={popup.frisdranken} func={changePopup} arg={"frisdranken"} />
+        <ItemListLayout state={popup.frisdranken} arg={"frisdranken"} nav={"frisdranken"} />
         {addPopup.frisdranken && <Add selection={"frisdranken"} />}
-        <span style={{
-            display: "flex",
-            width: "100%",
-            justifyContent: "center",
-            backgroundColor: "white",
-        }}>
-            <button style={{
-                width: "40%",
-            }}>edit</button>
-            <button style={{
-                width: "40%",
-            }} onClick={() => changePopup("frisdranken")}>add</button>
-        </span>
+        <EditAddButtonLayout />
     </div>)
 }

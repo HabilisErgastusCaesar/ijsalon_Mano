@@ -1,6 +1,7 @@
 import styles from './contactForm.module.css'
 
 import { Input } from '@/components/input';
+import Form from 'next/form'
 
 export const ContactForm = () => {
     const pushToBackend = (event:any) => {
@@ -12,7 +13,7 @@ export const ContactForm = () => {
         alert(`de naam is ${voorname} met de achternaam ${achtername} de email is ${email} the message is ---- ${message}`);
     };
 
-    return(<form method="get" onSubmit={pushToBackend} className={styles.container}>
+    return(<Form action="GET" onSubmit={pushToBackend} className={styles.container}>
         <section className={styles.head_section}>
         <section className={styles.info_section}>
             <h1>Neem contact op</h1>
@@ -36,5 +37,5 @@ export const ContactForm = () => {
         </section>
         <textarea id="message" required placeholder='verplicht veld --------->'></textarea>
         <button type="submit" >accept</button>
-    </form>)
+    </Form>)
 }

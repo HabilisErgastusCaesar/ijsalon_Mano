@@ -1,9 +1,7 @@
 import styles from './home.module.css'
-import { IjsSoorten } from './homeLayouts/ijsSoorten';
-import { Bakjes } from './homeLayouts/bakjes';
-import { Frisdranken } from './homeLayouts/frisdranken';
-import { HoorntjesBakjes } from './homeLayouts/hoorntjesBakjes';
-import { Strooisels } from './homeLayouts/strooiSels';
+import { ItemListLayout } from './homeLayouts/itemListLayout';
+
+import { RoundedButton } from '@/components/roundedButton';
 
 import { useState, useRef, useEffect } from 'react'
 
@@ -66,13 +64,15 @@ export const Homerig = () => {
         <div id="heading_img" className={styles.heading_img}>
             <img src="/Romano_ijssalon_placeholder.jpg" alt=""/>
         </div>
-        <button onClick={() => changePopup("ijssoorten")}>ijssoorten</button>
-        {popup.ijssoorten && <IjsSoorten />}
-        <button onClick={() => changePopup("strooisels")}>strooisels</button>
-        {popup.strooisels && <Strooisels />}
-        <button onClick={() => changePopup("hoorntjesBakjes")}>hoorntjes / bakjes</button>
-        {popup.hoorntjesBakjes && <HoorntjesBakjes />}
-        <button onClick={() => changePopup("frisdranken")}>frisdranken</button>
-        {popup.frisdranken && <Frisdranken />}
+        <div className={styles.items_container}>
+            <RoundedButton text={"ijssoorten"} buttonState={popup.ijssoorten} func={changePopup} arg={"ijssoorten"} />
+            <ItemListLayout state={popup.ijssoorten} arg={"ice"} nav={"ijsSoorten"} />
+            <RoundedButton text={"strooisels"} buttonState={popup.strooisels} func={changePopup} arg={"strooisels"} />
+            <ItemListLayout state={popup.strooisels} arg={"strooisels"} nav={"strooiSels"} />
+            <RoundedButton text={"hoorntjes / bakjes"} buttonState={popup.hoorntjesBakjes} func={changePopup} arg={"hoorntjesBakjes"} />
+            <ItemListLayout state={popup.hoorntjesBakjes} arg={"hoorntjes"} nav={"hoorntjesBakjes"} />
+            <RoundedButton text={"frisdranken"} buttonState={popup.frisdranken} func={changePopup} arg={"frisdranken"} />
+            <ItemListLayout state={popup.frisdranken} arg={"frisdranken"} nav={"frisdranken"} />
+        </div>
     </div>)
 }
